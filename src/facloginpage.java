@@ -3,6 +3,7 @@ import javax.swing.*;
 import java.awt.*;
 import java.awt.event.ActionEvent;
 import java.awt.event.ActionListener;
+import java.sql.ResultSet;
 
 public class facloginpage extends JFrame implements ActionListener {
     JButton signin, cancel;
@@ -32,12 +33,12 @@ public class facloginpage extends JFrame implements ActionListener {
         l2.setForeground(Color.white);
         add(l2);
 
-        JTextField username = new JTextField();
+        username = new JTextField();
         username.setBounds(250, 80, 150, 40);
         username.setFont(new Font("Segeo", Font.PLAIN, 24));
         add(username);
 
-        JPasswordField password = new JPasswordField();
+        password = new JPasswordField();
         password.setBounds(250, 160, 150, 40);
         add(password);
 
@@ -45,6 +46,7 @@ public class facloginpage extends JFrame implements ActionListener {
         signin.setBounds(440, 280, 100, 50);
         signin.setFont(new Font("Tahoma", Font.BOLD, 16));
         signin.setBackground(Color.white);
+        signin.addActionListener(this);
         add(signin);
 
 
@@ -73,12 +75,35 @@ public class facloginpage extends JFrame implements ActionListener {
         setVisible(true);
     }
 
+
     public void actionPerformed(ActionEvent ae){
         if(ae.getSource()==cancel){
             this.setVisible(false);
             new selectpage().setVisible(true);
+        } else if (ae.getSource()==signin) {
+            String username = this.username.getText();
+            String password = this.password.getText();
+
+            conn c = new conn();
+            String str = "select * from faculty where username ='" + username + "'and password ='" + password + "'";
+            try {
+                ResultSet rs = c.s.executeQuery(str);
+                if (rs.next()) {
+                    JOptionPane.showMessageDialog(null, "Login Successful!!!");
+                    new facdash().setVisible(true);
+                    this.setVisible(false);
+                } else {
+                    JOptionPane.showMessageDialog(null, "Invalid Username and Password!!!");
+                }
+            } catch (Exception e) {
+
+            }
+
+
+
         }
     }
+
 
 
     public static void main(String[] args) {

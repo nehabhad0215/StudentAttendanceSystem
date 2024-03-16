@@ -13,7 +13,7 @@ public class selectpage extends JFrame implements ActionListener {
 
 
         admin = new JButton("Admin");
-        admin.setBounds(60, 70, 140, 60);
+        admin.setBounds(60, 90, 140, 60);
         admin.setFont(new Font("Tahoma", Font.BOLD, 18));
         admin.setBackground(Color.white);
         admin.setForeground(Color.black);
@@ -21,7 +21,7 @@ public class selectpage extends JFrame implements ActionListener {
         add(admin);
 
         faculty = new JButton("Faculty");
-        faculty.setBounds(220, 170, 140, 60);
+        faculty.setBounds(220, 190, 140, 60);
         faculty.setFont(new Font("Tahoma", Font.BOLD, 18));
         faculty.setBackground(Color.white);
         faculty.setForeground(Color.black);
@@ -30,7 +30,7 @@ public class selectpage extends JFrame implements ActionListener {
 
 
         student = new JButton("Student");
-        student.setBounds(390, 70, 140, 60);
+        student.setBounds(390, 90, 140, 60);
         student.setFont(new Font("Tahoma", Font.BOLD, 18));
         student.setBackground(Color.white);
         student.setForeground(Color.black);

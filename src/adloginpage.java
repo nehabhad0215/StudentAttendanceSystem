@@ -8,7 +8,7 @@ import java.sql.ResultSet;
 public class adloginpage extends JFrame implements ActionListener {
  JButton signin, cancel;
  JTextField username;
-JTextField password;
+JPasswordField password;
 JLabel studentlogin;
 
  adloginpage() {
@@ -32,12 +32,12 @@ JLabel studentlogin;
   l2.setForeground(Color.white);
   add(l2);
 
-  JTextField username = new JTextField();
+ username = new JTextField();
   username.setBounds(250, 80, 150, 40);
   username.setFont(new Font("Segeo", Font.PLAIN, 24));
   add(username);
 
-  password = new JTextField();
+  password = new JPasswordField();
   password.setBounds(250, 160, 150, 40);
   add(password);
 
@@ -87,6 +87,7 @@ JLabel studentlogin;
     ResultSet rs = c.s.executeQuery(str);
     if (rs.next()) {
      JOptionPane.showMessageDialog(null, "Login Successful!!!");
+     new admindash().setVisible(true);
      this.setVisible(false);
     } else {
      JOptionPane.showMessageDialog(null, "Invalid Username and Password!!!");
