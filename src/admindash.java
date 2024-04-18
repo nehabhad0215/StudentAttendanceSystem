@@ -27,7 +27,7 @@ public class admindash extends JFrame implements ActionListener {
                 viewattendance.addActionListener(this);
         add(viewattendance);
 
-        logout = new JButton("Logout");
+        logout = new JButton("Back");
         logout.setBounds(40, 250, 200, 40);
         logout.setFont(new Font("Tahoma", Font.BOLD, 16));
         logout.setBackground(Color.white);
@@ -63,12 +63,12 @@ public class admindash extends JFrame implements ActionListener {
             this.setVisible(false);
         }
         if (ae.getSource() ==logout) {
-            new selectpage().setVisible(true);
+            new subjectdashadmin().setVisible(true);
             this.setVisible(false);
         }
 
         if (ae.getSource() ==logout) {
-        new selectpage().setVisible(true);
+        new subjectdashadmin().setVisible(true);
         this.setVisible(false);
     }
 

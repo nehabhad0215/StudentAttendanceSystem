@@ -12,7 +12,7 @@ public class facdash extends JFrame implements ActionListener {
 
 
         addstudent = new JButton("Add Student");
-        addstudent.setBounds(40, 90, 200, 60);
+        addstudent.setBounds(40, 90, 190, 60);
         addstudent.setFont(new Font("Tahoma", Font.BOLD, 18));
         addstudent.setBackground(Color.white);
         addstudent.setForeground(Color.black);
@@ -20,7 +20,7 @@ public class facdash extends JFrame implements ActionListener {
         add(addstudent);
 
         addattendance = new JButton("Add Attendance");
-        addattendance.setBounds(40, 200, 200, 60);
+        addattendance.setBounds(40, 200, 190, 60);
         addattendance.setFont(new Font("Tahoma",Font.BOLD, 18));
         addattendance.setBackground(Color.white);
         addattendance.setForeground(Color.black);
@@ -29,15 +29,15 @@ public class facdash extends JFrame implements ActionListener {
 
 
         viewattendance = new JButton("View Attendance");
-        viewattendance.setBounds(340, 90, 200, 60);
+        viewattendance.setBounds(340, 90, 190, 60);
         viewattendance.setFont(new Font("Tahoma", Font.BOLD, 18));
         viewattendance.setBackground(Color.white);
         viewattendance.setForeground(Color.black);
         viewattendance.addActionListener(this);
         add(viewattendance);
 
-        logout = new JButton("Logout");
-        logout.setBounds(340, 200, 200, 60);
+        logout = new JButton("Back");
+        logout.setBounds(340, 200, 190, 60);
         logout.setFont(new Font("Tahoma", Font.BOLD, 18));
         logout.setBackground(Color.white);
         logout.setForeground(Color.black);
@@ -77,7 +77,7 @@ public class facdash extends JFrame implements ActionListener {
         }
 
         if (ae.getSource() ==logout) {
-            new selectpage().setVisible(true);
+            new subjectdash().setVisible(true);
             this.setVisible(false);
         }
     }

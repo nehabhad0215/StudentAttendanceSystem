@@ -21,7 +21,7 @@ public class studash extends JFrame implements ActionListener {
                 viewattendance.addActionListener(this);
         add(viewattendance);
 
-        logout = new JButton("Logout");
+        logout = new JButton("Back");
         logout.setBounds(300, 200, 200, 60);
         logout.setFont(new Font("Tahoma", Font.BOLD, 18));
         logout.setBackground(Color.white);
@@ -54,7 +54,7 @@ public class studash extends JFrame implements ActionListener {
             this.setVisible(false);
         }
         if (ae.getSource() ==logout) {
-            new selectpage().setVisible(true);
+            new subjectdashstudent().setVisible(true);
             this.setVisible(false);
         }
     }

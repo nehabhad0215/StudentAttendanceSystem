@@ -90,7 +90,7 @@ public class facloginpage extends JFrame implements ActionListener {
                 ResultSet rs = c.s.executeQuery(str);
                 if (rs.next()) {
                     JOptionPane.showMessageDialog(null, "Login Successful!!!");
-                    new facdash().setVisible(true);
+                    new subjectdash().setVisible(true);
                     this.setVisible(false);
                 } else {
                     JOptionPane.showMessageDialog(null, "Invalid Username and Password!!!");

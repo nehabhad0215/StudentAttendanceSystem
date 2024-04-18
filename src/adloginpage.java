@@ -87,7 +87,7 @@ JLabel studentlogin;
     ResultSet rs = c.s.executeQuery(str);
     if (rs.next()) {
      JOptionPane.showMessageDialog(null, "Login Successful!!!");
-     new admindash().setVisible(true);
+     new subjectdashadmin().setVisible(true);
      this.setVisible(false);
     } else {
      JOptionPane.showMessageDialog(null, "Invalid Username and Password!!!");

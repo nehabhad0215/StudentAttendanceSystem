@@ -42,7 +42,8 @@ public class homepage extends JFrame implements ActionListener {
 
         setLayout(null);
         setLocationRelativeTo(null);
-        setVisible(true);
+
+      setVisible(true);
 
     }
 
